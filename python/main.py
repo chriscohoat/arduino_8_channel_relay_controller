@@ -53,7 +53,7 @@ def main():
             print "Arduino not connected! Attempting reconnect..."
             arduino = get_arduino_serial()
             if arduino:
-                print "Fixing threads..."
+                print "Arduino has been reconnected!"
         time.sleep(5)
 
 
