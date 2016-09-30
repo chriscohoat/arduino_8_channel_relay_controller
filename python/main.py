@@ -12,7 +12,9 @@ c = threading.Condition()
 arduino = None
 
 PUMP_RELAY = 8
-ARDUINO_SERIAL_PORT = "/dev/cu.usbmodem1421"
+#ARDUINO_SERIAL_PORT = "/dev/cu.usbmodem1421"
+#TODO: Get this from an environment variable
+ARDUINO_SERIAL_PORT = "/dev/ttyACM0"
 
 
 class ReadThread(threading.Thread):
