@@ -31,7 +31,7 @@ void loop() {
     if (commaIndex >= 0) {
       int desiredRelay = readString.substring(0, commaIndex).toInt();
       String offOrOn = readString.substring(commaIndex + 1);
-      if (desiredRelay < 2 || desiredRelay > 9 ) {
+      if (desiredRelay < 2 || desiredRelay > 9) {
         Serial.println(String("Desired relay of ") + desiredRelay + String(" was invalid. Expected `2 <= DESIRED_RELAY <= 9`"));
       } else {
         if (offOrOn == "off") {
