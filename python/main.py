@@ -4,10 +4,15 @@ import threading
 from flask import Flask
 from flask import jsonify
 from forms import ToggleForm, SwitchForm
+import schedule
+import datetime
 
 c = threading.Condition()
 
 arduino = None
+
+PUMP_RELAY = 8
+ARDUINO_SERIAL_PORT = "/dev/cu.usbmodem1421"
 
 
 class ReadThread(threading.Thread):
@@ -87,12 +92,47 @@ class WebThread(threading.Thread):
         app.run(host='0.0.0.0', port=9999)
 
 
+def turn_pump_on():
+    global arduino
+    try:
+        arduino.write(bytes(b"%s,on" % PUMP_RELAY))
+    except Exception, err:
+        print "Unable to turn on pump: %s" % err
+
+
+def turn_pump_off():
+    global arduino
+    try:
+        arduino.write(bytes(b"%s,off" % PUMP_RELAY))
+    except Exception, err:
+        print "Unable to turn on pump: %s" % err
+
+
+class JobThread(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+
+    def run(self):
+        time.sleep(10)
+
+        schedule.every().hour.at(":00").do(turn_pump_on)
+        schedule.every().hour.at(":15").do(turn_pump_off)
+
+        if datetime.datetime.utcnow().minute < 15:
+            turn_pump_on()
+
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+
+
 def get_arduino_serial():
     global arduino
     try:
-        arduino = serial.Serial("/dev/cu.usbmodem1411", 9600, timeout=.1)
+        arduino = serial.Serial(ARDUINO_SERIAL_PORT, 9600, timeout=.1)
         time.sleep(1)  # Need to wait until the connection is finished
-    except:
+    except Exception, err:
+        print err
         arduino = None
     return arduino
 
@@ -107,6 +147,9 @@ def main():
 
     webserver_thread = WebThread()
     webserver_thread.start()
+
+    job_thread = JobThread()
+    job_thread.start()
 
     while True:
         if not arduino or not arduino.isOpen():
