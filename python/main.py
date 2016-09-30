@@ -68,7 +68,7 @@ class WebThread(threading.Thread):
                 return WebThread.handle_form_errors(form)
             return jsonify({"success": True})
 
-        @app.route('/switch', methods=['POST'])
+        @app.route('/switchAll', methods=['POST'])
         def switch_all_relays():
             form = SwitchForm(csrf_enabled=False)
             if form.validate():
