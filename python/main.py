@@ -118,9 +118,9 @@ class JobThread(threading.Thread):
         time.sleep(10)
 
         schedule.every().hour.at(":00").do(turn_pump_on)
-        schedule.every().hour.at(":15").do(turn_pump_off)
+        schedule.every().hour.at(":14").do(turn_pump_off)
 
-        if datetime.datetime.utcnow().minute < 15:
+        if datetime.datetime.utcnow().minute < 14:
             turn_pump_on()
 
         while True:
