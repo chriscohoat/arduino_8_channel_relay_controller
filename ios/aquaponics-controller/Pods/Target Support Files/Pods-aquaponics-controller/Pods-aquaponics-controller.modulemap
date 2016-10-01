@@ -1,0 +1,6 @@
+framework module Pods_aquaponics_controller {
+  umbrella header "Pods-aquaponics-controller-umbrella.h"
+
+  export *
+  module * { export * }
+}

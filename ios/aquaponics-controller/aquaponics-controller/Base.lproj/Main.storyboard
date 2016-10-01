@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h78-pg-VRZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6JS-r8-Cz4">
+            <objects>
+                <navigationController id="h78-pg-VRZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nca-Qy-jO8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ssF-bd-o1V" kind="relationship" relationship="rootViewController" id="0ZM-lc-qtK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-AH-ohy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="80"/>
+        </scene>
+        <!--Aquaponics-->
+        <scene sceneID="cJE-1H-bhr">
+            <objects>
+                <viewController id="ssF-bd-o1V" customClass="RootViewController" customModule="aquaponics_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qT0-qS-3qo"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lb3-A3-Yoh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tbB-nx-nPE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Aquaponics" id="dxI-Ub-NfZ">
+                        <barButtonItem key="rightBarButtonItem" id="89K-DA-lGF">
+                            <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                            <connections>
+                                <segue destination="pFj-oj-MoG" kind="presentation" id="NU7-87-zQr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdv-VC-YXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="80"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="F66-aD-gyx">
+            <objects>
+                <navigationController title="Settings" id="pFj-oj-MoG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KeJ-Ie-ugd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="df9-BQ-Cw3" kind="relationship" relationship="rootViewController" id="4P6-WN-emJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QdV-TG-NWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="-395"/>
+        </scene>
+        <!--Settings Root-->
+        <scene sceneID="dqq-tq-WvL">
+            <objects>
+                <viewController title="Settings Root" id="df9-BQ-Cw3" customClass="SettingsRootViewController" customModule="aquaponics_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pha-NA-per"/>
+                        <viewControllerLayoutGuide type="bottom" id="9CG-j6-hYg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ddk-MB-Da3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Xle-6g-SQS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UEK-Wf-Pnq">
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="df9-BQ-Cw3" id="Frj-Wh-7kX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="1vJ-uu-kPm">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="df9-BQ-Cw3" id="BPK-90-t1d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97t-72-NeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3033" y="-395"/>
+        </scene>
+    </scenes>
+</document>
