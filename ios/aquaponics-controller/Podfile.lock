@@ -1,22 +1,42 @@
 PODS:
+  - Alamofire (4.0.1)
+  - Eureka (2.0.0-beta.1)
   - FontAwesome.swift (0.11.1)
+  - JGProgressHUD (1.4)
+  - Locksmith (3.0.0)
+  - SCLAlertView (0.6.0)
 
 DEPENDENCIES:
+  - Alamofire
+  - Eureka (~> 2.0.0-beta.1)
   - FontAwesome.swift (from `https://github.com/thii/FontAwesome.swift.git`, branch `master`)
+  - JGProgressHUD (~> 1.4)
+  - Locksmith
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift`)
 
 EXTERNAL SOURCES:
   FontAwesome.swift:
     :branch: master
     :git: https://github.com/thii/FontAwesome.swift.git
+  SCLAlertView:
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
 
 CHECKOUT OPTIONS:
   FontAwesome.swift:
     :commit: 22b67f9c8a77a6ebcddedaa7640a62cb8292547f
     :git: https://github.com/thii/FontAwesome.swift.git
+  SCLAlertView:
+    :commit: ac3d58970d785da0755049a28eca193893c142d0
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
 
 SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   FontAwesome.swift: 9879cd6a1462bf160662d519f7b7474d73bdd1c3
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  SCLAlertView: 0f6b3c23a48b4993564ff1dd3c065782e4b2b687
 
-PODFILE CHECKSUM: e5600d967f08b92e9f15d4afae1c8b4495b8cbb4
+PODFILE CHECKSUM: 477b2a6f9ebb8776b760ad00ac91046b0b3180e2
 
 COCOAPODS: 1.0.1

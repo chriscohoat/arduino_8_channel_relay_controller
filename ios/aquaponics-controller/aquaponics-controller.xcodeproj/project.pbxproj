@@ -13,6 +13,14 @@
 		830B94C41D9EDDC00092FE25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830B94C21D9EDDBF0092FE25 /* LaunchScreen.storyboard */; };
 		83B0413A1DA00EC100FF6416 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B041391DA00EC100FF6416 /* RootViewController.swift */; };
 		83B0413C1DA011C300FF6416 /* SettingsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0413B1DA011C300FF6416 /* SettingsRootViewController.swift */; };
+		83B0413E1DA0139E00FF6416 /* SettingsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0413D1DA0139E00FF6416 /* SettingsFormViewController.swift */; };
+		83B041411DA015AD00FF6416 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0413F1DA015AD00FF6416 /* GlobalHelpers.swift */; };
+		83B041421DA015AD00FF6416 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B041401DA015AD00FF6416 /* Keychain.swift */; };
+		83B041451DA0170700FF6416 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B041441DA0170700FF6416 /* User.swift */; };
+		83B041471DA017BF00FF6416 /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B041461DA017BF00FF6416 /* Outlet.swift */; };
+		83B041491DA018C300FF6416 /* Entrance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B041481DA018C300FF6416 /* Entrance.storyboard */; };
+		83B0414C1DA0193500FF6416 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0414B1DA0193500FF6416 /* LoginViewController.swift */; };
+		83B0414F1DA01A3E00FF6416 /* MainRootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B0414E1DA01A3E00FF6416 /* MainRootTabBarController.swift */; };
 		B0D1183EF14FCD56E9C03780 /* Pods_aquaponics_controller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86AD57FC31DA4CC017871F /* Pods_aquaponics_controller.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +36,14 @@
 		830B94C51D9EDDC00092FE25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B041391DA00EC100FF6416 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		83B0413B1DA011C300FF6416 /* SettingsRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRootViewController.swift; sourceTree = "<group>"; };
+		83B0413D1DA0139E00FF6416 /* SettingsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFormViewController.swift; sourceTree = "<group>"; };
+		83B0413F1DA015AD00FF6416 /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		83B041401DA015AD00FF6416 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		83B041441DA0170700FF6416 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		83B041461DA017BF00FF6416 /* Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outlet.swift; sourceTree = "<group>"; };
+		83B041481DA018C300FF6416 /* Entrance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Entrance.storyboard; sourceTree = "<group>"; };
+		83B0414B1DA0193500FF6416 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		83B0414E1DA01A3E00FF6416 /* MainRootTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRootTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +88,47 @@
 		830B94B81D9EDDBF0092FE25 /* aquaponics-controller */ = {
 			isa = PBXGroup;
 			children = (
+				83B041431DA016EE00FF6416 /* Models */,
+				83B0414A1DA0192100FF6416 /* Entrance */,
+				83B0414D1DA01A2100FF6416 /* Main */,
 				830B94B91D9EDDBF0092FE25 /* AppDelegate.swift */,
+				83B0413F1DA015AD00FF6416 /* GlobalHelpers.swift */,
+				83B041401DA015AD00FF6416 /* Keychain.swift */,
+				83B041481DA018C300FF6416 /* Entrance.storyboard */,
 				830B94BD1D9EDDBF0092FE25 /* Main.storyboard */,
 				830B94C01D9EDDBF0092FE25 /* Assets.xcassets */,
 				830B94C21D9EDDBF0092FE25 /* LaunchScreen.storyboard */,
 				830B94C51D9EDDC00092FE25 /* Info.plist */,
 				83B041391DA00EC100FF6416 /* RootViewController.swift */,
 				83B0413B1DA011C300FF6416 /* SettingsRootViewController.swift */,
+				83B0413D1DA0139E00FF6416 /* SettingsFormViewController.swift */,
 			);
 			path = "aquaponics-controller";
+			sourceTree = "<group>";
+		};
+		83B041431DA016EE00FF6416 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83B041441DA0170700FF6416 /* User.swift */,
+				83B041461DA017BF00FF6416 /* Outlet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83B0414A1DA0192100FF6416 /* Entrance */ = {
+			isa = PBXGroup;
+			children = (
+				83B0414B1DA0193500FF6416 /* LoginViewController.swift */,
+			);
+			name = Entrance;
+			sourceTree = "<group>";
+		};
+		83B0414D1DA01A2100FF6416 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				83B0414E1DA01A3E00FF6416 /* MainRootTabBarController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		850662877F87A1DBEEF5BE0C /* Frameworks */ = {
@@ -156,6 +204,7 @@
 			files = (
 				830B94C41D9EDDC00092FE25 /* LaunchScreen.storyboard in Resources */,
 				830B94C11D9EDDBF0092FE25 /* Assets.xcassets in Resources */,
+				83B041491DA018C300FF6416 /* Entrance.storyboard in Resources */,
 				830B94BF1D9EDDBF0092FE25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +264,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B0414C1DA0193500FF6416 /* LoginViewController.swift in Sources */,
 				83B0413A1DA00EC100FF6416 /* RootViewController.swift in Sources */,
 				830B94BA1D9EDDBF0092FE25 /* AppDelegate.swift in Sources */,
+				83B041411DA015AD00FF6416 /* GlobalHelpers.swift in Sources */,
+				83B0413E1DA0139E00FF6416 /* SettingsFormViewController.swift in Sources */,
+				83B041471DA017BF00FF6416 /* Outlet.swift in Sources */,
 				83B0413C1DA011C300FF6416 /* SettingsRootViewController.swift in Sources */,
+				83B041421DA015AD00FF6416 /* Keychain.swift in Sources */,
+				83B0414F1DA01A3E00FF6416 /* MainRootTabBarController.swift in Sources */,
+				83B041451DA0170700FF6416 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +398,7 @@
 				DEVELOPMENT_TEAM = 35565G66A7;
 				INFOPLIST_FILE = "aquaponics-controller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chriscohoat.aquaponics-controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -356,6 +413,7 @@
 				DEVELOPMENT_TEAM = 35565G66A7;
 				INFOPLIST_FILE = "aquaponics-controller/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chriscohoat.aquaponics-controller";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

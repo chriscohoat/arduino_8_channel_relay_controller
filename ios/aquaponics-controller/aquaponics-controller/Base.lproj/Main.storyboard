@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h78-pg-VRZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="frK-Ks-OKw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="6JS-r8-Cz4">
             <objects>
                 <navigationController id="h78-pg-VRZ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="nca-Qy-jO8">
+                    <tabBarItem key="tabBarItem" title="Item" id="6im-jJ-sl2"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nca-Qy-jO8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -75,7 +76,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ddk-MB-Da3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOK-WT-fFF">
+                                <connections>
+                                    <segue destination="0tt-rb-cDy" kind="embed" id="z3E-N1-BUM"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vOK-WT-fFF" firstAttribute="top" secondItem="Pha-NA-per" secondAttribute="bottom" id="K8M-64-vrt"/>
+                            <constraint firstItem="9CG-j6-hYg" firstAttribute="top" secondItem="vOK-WT-fFF" secondAttribute="bottom" id="bhV-QF-ViF"/>
+                            <constraint firstItem="vOK-WT-fFF" firstAttribute="width" secondItem="Ddk-MB-Da3" secondAttribute="width" id="gZ6-To-XDd"/>
+                            <constraint firstItem="vOK-WT-fFF" firstAttribute="centerX" secondItem="Ddk-MB-Da3" secondAttribute="centerX" id="qbk-TZ-qBT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Xle-6g-SQS">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="UEK-Wf-Pnq">
@@ -93,6 +107,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97t-72-NeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3033" y="-395"/>
+        </scene>
+        <!--Main Root Tab Bar Controller-->
+        <scene sceneID="t18-Hq-har">
+            <objects>
+                <tabBarController storyboardIdentifier="MainRootTabBarController" id="frK-Ks-OKw" customClass="MainRootTabBarController" customModule="aquaponics_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jgn-K6-gGg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h78-pg-VRZ" kind="relationship" relationship="viewControllers" id="zbi-j2-ZTc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXx-Sc-JHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-750" y="644"/>
+        </scene>
+        <!--Settings Form View Controller-->
+        <scene sceneID="aiM-vr-Bux">
+            <objects>
+                <viewController id="0tt-rb-cDy" customClass="SettingsFormViewController" customModule="aquaponics_controller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iKn-eV-9T8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOJ-B0-QAW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3818" y="-367"/>
         </scene>
     </scenes>
 </document>
